@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>ru.spb.svga.ydb</groupId>
+  <artifactId>ydb-jdbc-driver</artifactId>
+  <version>0.1-SNAPSHOT</version>
+
+  <properties>
+    <maven.compiler.source>20</maven.compiler.source>
+    <maven.compiler.target>20</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>tech.ydb</groupId>
+        <artifactId>ydb-sdk-bom</artifactId>
+        <version>2.1.4</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <!-- Scheme service client -->
+    <dependency>
+      <groupId>tech.ydb</groupId>
+      <artifactId>ydb-sdk-scheme</artifactId>
+    </dependency>
+
+    <!-- Table service client -->
+    <dependency>
+      <groupId>tech.ydb</groupId>
+      <artifactId>ydb-sdk-table</artifactId>
+    </dependency>
+
+    <!-- Topic service client -->
+    <dependency>
+      <groupId>tech.ydb</groupId>
+      <artifactId>ydb-sdk-topic</artifactId>
+    </dependency>
+
+    <!-- Coordination service client -->
+    <dependency>
+      <groupId>tech.ydb</groupId>
+      <artifactId>ydb-sdk-coordination</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>
